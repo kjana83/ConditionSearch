@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Claim STP</title>
+    <script src="../Scripts/jquery-2.1.1.js"></script>
+    <script src="../Scripts/materialize/materialize.js"></script>
+    <link href="../content/materialize/materialize.css" rel="stylesheet" />
+    <script src="../Scripts/angular.js"></script>
+    <script src="js/doctor.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body ng-app="Doctor" data-ng-controller="doctorController">
+    <div class="row">
+        <nav class="blue darken-1">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="brand-logo">My Claim</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="../index.html">Doctor</a></li>
+                    <li><a href="components.html">Claim Status</a></li>
+                    <li><a href="javascript.html">Hospital Locator</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="row" >
+        <div class="col s12 m4" data-ng-repeat="gp in Results">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1 truncate" data-ng-bind="gp.Name"></span>
+                    <p>
+                        <label data-ng-bind="gp.AddressLine1"></label><br />
+                        <label data-ng-bind="gp.AddressLine3"></label><br />
+                        <label data-ng-bind="gp.AddressLine3"></label><br />
+                        <label data-ng-bind="gp.AddressLine4"></label><br />
+                        <label data-ng-bind="gp.AddressLine5"></label><br />
+                        <label data-ng-bind="gp.PostCode"></label><br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i>{{gp.Phone}}</a>
+                    <a class="#" href="Video.html"><i class="mdi-av-videocam small"></i></a>                    
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1">Great Chesterford Surgery (Branch)</span>
+                    <p>
+                        School Street Surgery<br />
+                        School Street<br />
+                        Great Chesterford<br />
+                        Saffron Walden<br />
+                        Essex<br />
+                        CB10 1NN<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i></a>
+                    <a class="#"><i class="mdi-av-videocam small"></i></a>
+                    <a class="#"><i class="mdi-communication-messenge small"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1">Great Chesterford Surgery (Branch)</span>
+                    <p>
+                        School Street Surgery<br />
+                        School Street<br />
+                        Great Chesterford<br />
+                        Saffron Walden<br />
+                        Essex<br />
+                        CB10 1NN<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i></a>
+                    <a class="#"><i class="mdi-av-videocam small"></i></a>
+                    <a class="#"><i class="mdi-communication-messenge small"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1">Great Chesterford Surgery (Branch)</span>
+                    <p>
+                        School Street Surgery<br />
+                        School Street<br />
+                        Great Chesterford<br />
+                        Saffron Walden<br />
+                        Essex<br />
+                        CB10 1NN<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i></a>
+                    <a class="#"><i class="mdi-av-videocam small"></i></a>
+                    <a class="#"><i class="mdi-communication-messenge small"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1">Great Chesterford Surgery (Branch)</span>
+                    <p>
+                        School Street Surgery<br />
+                        School Street<br />
+                        Great Chesterford<br />
+                        Saffron Walden<br />
+                        Essex<br />
+                        CB10 1NN<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i></a>
+                    <a class="#"><i class="mdi-av-videocam small"></i></a>
+                    <a class="#"><i class="mdi-communication-messenge small"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1">Great Chesterford Surgery (Branch)</span>
+                    <p>
+                        School Street Surgery<br />
+                        School Street<br />
+                        Great Chesterford<br />
+                        Saffron Walden<br />
+                        Essex<br />
+                        CB10 1NN<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i></a>
+                    <a class="#"><i class="mdi-av-videocam small"></i></a>
+                    <a class="#"><i class="mdi-communication-messenge small"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1">Great Chesterford Surgery (Branch)</span>
+                    <p>
+                        School Street Surgery<br />
+                        School Street<br />
+                        Great Chesterford<br />
+                        Saffron Walden<br />
+                        Essex<br />
+                        CB10 1NN<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i></a>
+                    <a class="#"><i class="mdi-av-videocam small"></i></a>
+                    <a class="#"><i class="mdi-communication-messenge small"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1">Great Chesterford Surgery (Branch)</span>
+                    <p>
+                        School Street Surgery<br />
+                        School Street<br />
+                        Great Chesterford<br />
+                        Saffron Walden<br />
+                        Essex<br />
+                        CB10 1NN<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i></a>
+                    <a class="#"><i class="mdi-av-videocam small"></i></a>
+                    <a class="#"><i class="mdi-communication-messenge small"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1">Great Chesterford Surgery (Branch)</span>
+                    <p>
+                        School Street Surgery<br />
+                        School Street<br />
+                        Great Chesterford<br />
+                        Saffron Walden<br />
+                        Essex<br />
+                        CB10 1NN<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i></a>
+                    <a class="#"><i class="mdi-av-videocam small"></i></a>
+                    <a class="#"><i class="mdi-communication-messenge small"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1">Great Chesterford Surgery (Branch)</span>
+                    <p>
+                        School Street Surgery<br />
+                        School Street<br />
+                        Great Chesterford<br />
+                        Saffron Walden<br />
+                        Essex<br />
+                        CB10 1NN<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i></a>
+                    <a class="#"><i class="mdi-av-videocam small"></i></a>
+                    <a class="#"><i class="mdi-communication-messenge small"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1">Great Chesterford Surgery (Branch)</span>
+                    <p>
+                        School Street Surgery<br />
+                        School Street<br />
+                        Great Chesterford<br />
+                        Saffron Walden<br />
+                        Essex<br />
+                        CB10 1NN<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i></a>
+                    <a class="#"><i class="mdi-av-videocam small"></i></a>
+                    <a class="#"><i class="mdi-communication-messenge small"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="title blue-grey-text darken-1">Great Chesterford Surgery (Branch)</span>
+                    <p>
+                        School Street Surgery<br />
+                        School Street<br />
+                        Great Chesterford<br />
+                        Saffron Walden<br />
+                        Essex<br />
+                        CB10 1NN<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="#"><i class="mdi-communication-phone small"></i></a>
+                    <a class="#"><i class="mdi-av-videocam small"></i></a>
+                    <a class="#"><i class="mdi-communication-messenge small"></i></a>
+                </div>
+            </div>
+        </div>-->
+    </div>
+
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Doctor</title>
+    <script src="../Scripts/jquery-2.1.1.js"></script>
+    <script src="../Scripts/materialize/materialize.js"></script>
+    <link href="../content/materialize/materialize.css" rel="stylesheet" />
+    <script src="../Scripts/angular.js"></script>
+    <script src="js/doctor.js"></script>
+</head>
+<body>
+    <div class="container" data-ng-app="Doctor">
+     
+        <div class="row" data-ng-controller="doctorController">
+            <div class="input-field col s6">
+                <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
