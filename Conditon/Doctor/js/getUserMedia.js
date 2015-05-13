@@ -11,6 +11,7 @@ navigator.getWebcam(
 	    audio: true
 	},
 	function gotWebcam(stream) {
+	    var localVideo = document.getElementById('localVideo');
 	    localVideo.src = window.URL.createObjectURL(stream);
 	    localVideo.play();
 

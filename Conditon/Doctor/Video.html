@@ -4,9 +4,11 @@
     <title>Claim STP</title>
     <script src="../Scripts/jquery-2.1.1.js"></script>
     <script src="../Scripts/materialize/materialize.js"></script>
+     <script type="text/javascript" src="http://cdn.peerjs.com/0.3/peer.js"></script>
     <link href="../content/materialize/materialize.css" rel="stylesheet" />
     <script src="../Scripts/angular.js"></script>
-    <script src="js/getUserMedia.js"></script>
+    <!--<script src="js/getUserMedia.js"></script>-->
+    <script src="js/peerjs.js"></script>
     <script src="js/showAddress.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -27,9 +29,10 @@
 
     <div class="row">
         <div class="col s12 m6 left">
-            <video width="100%" class="responsive-video" controls id="localVideo">
-                <source src="movie.mp4" type="video/mp4">
+            <video width="100%" autoplay id="my-video">
+                
             </video>
+            <video width="100%" height="10px" controls id="video"></video>
         </div>
         <div class="col s12 m6 right">
             <a href="gpDoctor.html">Call Doctor</a>

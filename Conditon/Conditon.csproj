@@ -160,6 +160,7 @@
     <Content Include="Doctor\Index.html" />
     <Content Include="Doctor\js\doctor.js" />
     <Content Include="Doctor\js\getUserMedia.js" />
+    <Content Include="Doctor\js\peerjs.js" />
     <Content Include="Doctor\js\showAddress.js" />
     <Content Include="Doctor\Video.html" />
     <Content Include="favicon.ico" />
