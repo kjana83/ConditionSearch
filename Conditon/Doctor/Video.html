@@ -7,9 +7,11 @@
     <link href="../content/materialize/materialize.css" rel="stylesheet" />
     <script src="../Scripts/angular.js"></script>
     <script src="js/getUserMedia.js"></script>
+    <script src="js/showAddress.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
-<body>
+<body onload="initialize()">
     <div class="row">
         <nav class="blue darken-1">
             <div class="nav-wrapper">
@@ -32,6 +34,10 @@
         <div class="col s12 m6 right">
             <a href="gpDoctor.html">Call Doctor</a>
         </div>
+        <div class="col s12 m6 right">
+            <div id="map_canvas" style=" height: 300px; width: 500px;"></div>
+        </div>
     </div>
+    
 </body>
 </html>
