@@ -160,8 +160,11 @@
     <Content Include="Doctor\Index.html" />
     <Content Include="Doctor\js\doctor.js" />
     <Content Include="Doctor\js\getUserMedia.js" />
+    <Content Include="Doctor\js\gp.js" />
+    <Content Include="Doctor\js\patient.js" />
     <Content Include="Doctor\js\peerjs.js" />
     <Content Include="Doctor\js\showAddress.js" />
+    <Content Include="Doctor\Patient.html" />
     <Content Include="Doctor\Video.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
